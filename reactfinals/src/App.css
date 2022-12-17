@@ -1,0 +1,137 @@
+.App{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border: 2px solid rgb(0, 128, 43);
+}
+
+.navbar{
+    position: relative;
+    top:1px;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.title{
+    margin-left: 20px;
+    /* border: 2px solid green; */
+    font-size: 1.9rem;
+    text-align: center;
+    align-self: center;
+}
+
+.infoWrapper{
+    /* border: 2px solid red; */
+    max-height: 100%;
+    width: 500px;
+    /* padding: 10px; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.total{
+    font-size: larger;
+    font-weight: 600;
+}
+
+.addButton{
+    font-weight: 700;
+    font-size: 1.9rem;
+    color:rgb(0, 138, 23);
+    /* background-color: aliceblue; */
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addButton:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.quantityRow{
+    width: 20px;
+    height: 15px;
+}
+
+.TableContainer{
+    /* border: 2px solid red; */
+    width: 98%;
+    box-sizing: border-box;
+    gap: 10px;
+    padding: 1rem;
+    justify-self: flex-start;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th{
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding: 8px;
+    font-size: 1.3rem;
+    color: white;
+    height: 35px;
+  }
+  td {
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding: 8px;
+    font-size: 1.1rem;
+    color: black;
+  }
+  
+  th {
+    background-color: rgb(0, 55, 87);
+  }
+  
+  td {
+    background-color: rgb(205, 235, 253);
+  }
+  
+  .update:hover{
+    cursor: pointer;
+  }
+  .delete:hover{
+    cursor: pointer;
+  }
+
+  /* form {
+    display: flex;
+    gap: 5px;
+  }
+  
+  form td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  form * {
+    font-size: 28px;
+  } */
