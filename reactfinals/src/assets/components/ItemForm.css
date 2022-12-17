@@ -8,7 +8,7 @@
     align-items: center;
     height: 460px;
     width: 300px;
-    background-color: darkcyan;
+    background-color: #2b3647;
     border-radius: 10px;
     box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
     padding: 12px;
@@ -60,6 +60,10 @@
     font-size: 1.1rem;
 }
 
+.addItem:hover{
+    color:white;
+    background-color:cadetblue;
+}
 .quantity{
     color: black;
     font-size:small;

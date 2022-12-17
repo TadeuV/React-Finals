@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch} from "react-redux";
 import { useState } from "react";
 import Select from "react-select"
+import { addItem,updateItem } from "../reducers/itemsSlice";
 
 
 export default function ItemForm({itemId,setItemId}) {
@@ -33,7 +34,6 @@ export default function ItemForm({itemId,setItemId}) {
 
   const handleSelect = (e) =>{
     setInputSelect(e)
-    // console.log(inputSelect);
   }
 
   const handleSubmit = (e) =>{
@@ -41,9 +41,9 @@ export default function ItemForm({itemId,setItemId}) {
 
     if (inputData.itemName && inputData.type && inputData.brand !== ""){
       if (itemId === null){
-        dispatch(NewItem(inputData,inputSelect))
+        dispatch(addItem({inputData,inputSelect}))
       }else{
-        dispatch(UpdateItem(itemId,inputData,inputSelect))
+        dispatch(updateItem({itemId,inputData,inputSelect}))
       }
       clear()
       navigate("/")
@@ -61,7 +61,6 @@ export default function ItemForm({itemId,setItemId}) {
     e.preventDefault()
     
     const {name,value} = e.target;
-    console.log(name,value);
     setInputData({
       ...inputData, [name]:value
     })

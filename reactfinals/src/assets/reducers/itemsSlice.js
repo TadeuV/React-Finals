@@ -32,26 +32,23 @@ export const itemsSlice=createSlice({
         itemsList:[],
     },
     reducers:{
-        // setItemsList:(state,action) =>{
-        //     return{
-        //         ...state,itemsList:[...action.payload]};
-        // },
         addItem:(state,action)=>{
-
+            const newItem = {
+                id:uuid(),
+                data:action.payload.inputData,
+                quant:action.payload.inputSelect,
+            };
             return{
-                ...state,itemsList:[action.payload,...state.itemsList]};
+                ...state,itemsList:[...state.itemsList, newItem]};
         },
         updateItem:(state,action)=>{
             state.itemsList.map(elem =>{
-            return elem.id ===action.id ? ((elem.data = action.data)&&(elem.quant=action.quant)) : (elem=elem)   
+            return elem.id ===action.payload.itemId ? ((elem.data = action.payload.inputData)&&(elem.quant=action.payload.inputSelect)) : (elem=elem)   
             })
-            return{
-                ...state,
-                itemsList:[...state.itemsList]
-            }
+           
         },
         deleteItem:(state,action)=>{
-            const newItemsList=state.itemsList.filter((elem)=>( elem.id !== action.id))
+            const newItemsList=state.itemsList.filter((elem)=>( elem.id !== action.payload))
             return{
                 ...state,itemsList:newItemsList};
         },
